@@ -42,7 +42,8 @@ class HomeViewController: UIViewController {
         let headerView = HeroHeaderUIView(frame: CGRect(x:0, y:0, width: view.bounds.width, height: 450))
         homeFeedTable.tableHeaderView = headerView
         
-        APICaller.shared.getMovie(with: "Harry potter")
+        
+
         
     }
 
@@ -183,3 +184,14 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource  {
     }
 }
  
+
+extension HomeViewController: CollectionViewTableViewCellDelegate {
+    func collectionViewTableViewCellDidTrapCell(_cell: CollectionViewTableViewCell, viewModel: TitlePreviewViewModel) {
+        let vc = TitlePreviewViewController()
+        vc.configure(with: viewModel)
+        navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+
+
