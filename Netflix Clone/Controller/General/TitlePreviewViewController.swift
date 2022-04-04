@@ -83,8 +83,9 @@ class TitlePreviewViewController: UIViewController {
         let overviewLabelConstraints = [
           
             overviewLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 15),
+            overviewLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            overviewLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor)
             
-              overviewLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             
         ]
         
@@ -103,7 +104,7 @@ class TitlePreviewViewController: UIViewController {
     }
 
     
-    func connfigure(with model: TitlePreviewViewModel) {
+    func configure(with model: TitlePreviewViewModel) {
         titleLabel.text = model.title
         overviewLabel.text = model.titleOverview
         
