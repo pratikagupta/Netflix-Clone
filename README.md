@@ -1,5 +1,3 @@
 # Netflix-Clone
 
 
-
-
